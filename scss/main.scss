@@ -1,6 +1,162 @@
-$bg-color: #171619;
+$bg-color: #09121B;
+$font-color: #fff;
+$primary-color: #C1B844;
+$overlay: rgba(0, 0, 0, 0.3);
+$banner-size: 800px;
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
 
 body {
 	background: $bg-color;
-	color: #fff;
+	color: $font-color;
+}
+
+hr.light {
+ border-top:1px solid #d5d5d5;
+ width:75%;
+ margin-top:.8rem;
+ margin-bottom:1rem
+}
+
+.navbar {
+	border-bottom: $primary-color 3px solid;
+	opacity: 0.9;
+
+	.logo-img {
+		max-height: 40px;
+	}
+}
+
+#home-head {
+	background-image: url(../img/bg.jpg);
+	min-height: $banner-size;
+	background-size: cover;
+	background-attachment: fixed;
+
+	.overlay {
+		background-color: $overlay;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		min-height: $banner-size;
+	}
+	.home-inner {
+		padding-top: 150px;
+	}
+	.title {
+		text-transform: uppercase;
+		display: block;
+
+		h1 {
+			font-size: 50px;
+			font-weight: 600;
+			letter-spacing: 5px;
+			position: relative;
+			animation: title-in 500ms ease-in;
+		}
+		@keyframes title-in {
+			0% {
+				margin-top: 200px;
+			}
+		}
+
+		h2 {
+			font-size: 30px;
+			font-weight: 600;
+			letter-spacing: 4px;
+		}
+		@media (max-width: 768px) {
+			h1 {
+				font-size: 35px;
+				font-weight: 600;
+				letter-spacing: 3px;
+			}
+
+			h2 {
+				font-size: 20px;
+				font-weight: 600;
+				letter-spacing: 2px;
+			}
+		}
+		@media (max-width: 576px) {
+			h1 {
+				font-size: 25px;
+				font-weight: 600;
+				letter-spacing: 3px;
+			}
+
+			h2 {
+				font-size: 15px;
+				font-weight: 600;
+				letter-spacing: 2px;
+			}
+		}
+	}
+}
+
+#skills-head {
+	background-color: $bg-color;
+	border-bottom: $primary-color 3px solid;
+	border-top: $primary-color 3px solid;
+	min-height: 11em;
+	opacity: 0.9;
+	.row1,
+	.row2 {
+		margin-bottom: 1em;
+		margin-top: 1em;
+	}
+	.ico-cont {
+		height: 5em;
+		width: 5em;
+	}
+	i {
+		font-size: 5em;
+	}
+}
+
+/*Font Awesome*/
+.fa-css3-alt {
+ color:#379AD6
+}
+.fa-html5 {
+ color:#F16529
+}
+.fa-js {
+ color:#F7E018
+}
+.fa-php {
+ color:#666699
+}
+.fa-java {
+ color:#F8781F
+}
+.fa-git-alt {
+ color:#F05033
+}
+.fa-css3-alt:hover,
+.fa-html5:hover,
+.fa-js:hover,
+.fa-php:hover,
+.fa-java:hover,
+.fa-git-alt:hover {
+	transition-duration: 300ms;
+	transition-property: color;
+	transition-timing-function: ease-in;
+ 	color:#d5d5d5;
 }

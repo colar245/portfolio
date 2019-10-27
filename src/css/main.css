@@ -1,3 +1,127 @@
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
 body {
-  background: #171619;
+  background: #09121B;
   color: #fff; }
+
+hr.light {
+  border-top: 1px solid #d5d5d5;
+  width: 75%;
+  margin-top: .8rem;
+  margin-bottom: 1rem; }
+
+.navbar {
+  border-bottom: #C1B844 3px solid;
+  opacity: 0.9; }
+  .navbar .logo-img {
+    max-height: 40px; }
+
+#home-head {
+  background-image: url(../img/bg.jpg);
+  min-height: 800px;
+  background-size: cover;
+  background-attachment: fixed; }
+  #home-head .overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 800px; }
+  #home-head .home-inner {
+    padding-top: 150px; }
+  #home-head .title {
+    text-transform: uppercase;
+    display: block; }
+    #home-head .title h1 {
+      font-size: 50px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      position: relative;
+      animation: title-in 500ms ease-in; }
+
+@keyframes title-in {
+  0% {
+    margin-top: 200px; } }
+    #home-head .title h2 {
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: 4px; }
+    @media (max-width: 768px) {
+      #home-head .title h1 {
+        font-size: 35px;
+        font-weight: 600;
+        letter-spacing: 3px; }
+      #home-head .title h2 {
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 2px; } }
+    @media (max-width: 576px) {
+      #home-head .title h1 {
+        font-size: 25px;
+        font-weight: 600;
+        letter-spacing: 3px; }
+      #home-head .title h2 {
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 2px; } }
+
+#skills-head {
+  background-color: #09121B;
+  border-bottom: #C1B844 3px solid;
+  border-top: #C1B844 3px solid;
+  min-height: 11em;
+  opacity: 0.9; }
+  #skills-head .row1,
+  #skills-head .row2 {
+    margin-bottom: 1em;
+    margin-top: 1em; }
+  #skills-head .ico-cont {
+    height: 5em;
+    width: 5em; }
+  #skills-head i {
+    font-size: 5em; }
+
+/*Font Awesome*/
+.fa-css3-alt {
+  color: #379AD6; }
+
+.fa-html5 {
+  color: #F16529; }
+
+.fa-js {
+  color: #F7E018; }
+
+.fa-php {
+  color: #666699; }
+
+.fa-java {
+  color: #F8781F; }
+
+.fa-git-alt {
+  color: #F05033; }
+
+.fa-css3-alt:hover,
+.fa-html5:hover,
+.fa-js:hover,
+.fa-php:hover,
+.fa-java:hover,
+.fa-git-alt:hover {
+  transition-duration: 300ms;
+  transition-property: color;
+  transition-timing-function: ease-in;
+  color: #d5d5d5; }
