@@ -135,98 +135,52 @@ hr.light {
 
 #projects-head {
 	margin-top: 5em;
-	/* .flip-head {
-		text-decoration: none;
-	}
-	.flip-md {
-		position: absolute;
-		transform: translate(-50%,-50%);
-	}
-	.flip {
+	.cokiCard {
+		margin-top: 1em;
+		text-align: center;
+		min-height: 200px;
 		cursor: pointer;
-		width: 340px;
-		height: 480px;
-
+		position: relative;
 	}
-	.flip-front img{
-		height: 100%;
+	.cokiCard-wrap {
+		padding: 2em;
 	}
-	.flip-front,
-	.flip-back {
+	.cokiCard-img {
+		position: relative;
+	    z-index: 1;
+	    height: 100%;
+	    top: 0;
+	    left: 0;
+	}
+	.cokiCard-front,
+	.cokiCard-back {
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
-		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
 		position: absolute;
 		transition: transform 600ms linear;
 	}
-	.flip-front {
-		background: $bg-color;
+	.cokiCard-front {
 		transform: perspective(600px) rotateY(0deg);
 	}
-	.flip-back {
-		background: $bg-color;
+	.cokiCard-back {
 		transform: perspective(600px) rotateY(180deg);
 	}
-	.flip-back-c {
-		color: $primary-color;
+	.cokiCard-backCont {
+		margin: 0 auto;
+		padding-top: 2em;
+		background-color: #379AD6;
 		text-align: center;
-		width: 100%;
+		max-width: 20em;
+		height: 100%;
 	}
-	.flip:hover > .flip-front {
+	.cokiCard:hover > .cokiCard-front {
 		transform: perspective(600px) rotateY(-180deg);
 	}
-	.flip:hover > .flip-back {
+	.cokiCard:hover > .cokiCard-back {
 		transform: perspective(600px) rotateY(0deg);
-	} */
-}
-.cokiCard {
-	margin-top: 1em;
-	text-align: center;
-	//background-color: #379AD6;
-	min-height: 200px;
-	cursor: pointer;
-	position: relative;
-	//transform: translate(-50%,-50%);
-}
-.cokiCard-wrap {
-	padding: 2em;
-}
-.cokiCard-img {
-	position: relative;
-    z-index: 1;
-    width: 100%;
-    top: 0;
-    left: 0;
-}
-.cokiCard-front,
-.cokiCard-back {
-	//width: 100%;
-	//height: 100%;
-	overflow: hidden;
-	-webkit-backface-visibility: hidden;
-	position: absolute;
-	transition: transform 600ms linear;
-}
-.cokiCard-front {
-	transform: perspective(600px) rotateY(0deg);
-}
-.cokiCard-back {
-	height: 100%;
-	width: 100%;
-	padding-top: 10%;
-	background-color: #379AD6;
-	transform: perspective(600px) rotateY(180deg);
-}
-.cokiCard-backCont {
-	text-align: center;
-	width: 100%;
-}
-.cokiCard:hover > .cokiCard-front {
-	transform: perspective(600px) rotateY(-180deg);
-}
-.cokiCard:hover > .cokiCard-back {
-	transform: perspective(600px) rotateY(0deg);
+	}
 }
 
 /*Font Awesome*/
